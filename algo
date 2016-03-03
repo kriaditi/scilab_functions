@@ -14,7 +14,8 @@ http://in.mathworks.com/help/comm/functionlist.html
 
 2) Given function is sinad:
 sinad function returns the signal to noise and distortion ratio (SINAD) in dBc of the real-valued sinusoidal signal x.
-SINAD= P(signal) + P(noise) + P(distortion)
-      --------------------------------------
-             P(noise) + P(distortion)
-             
+In the time domain, SINAD is calculated as a ratio of the RMS value of the signal to the RMS value of the noise + distortion. 
+RMS values are summed as squares and then the square root is taken of the result to obtain a composite RMS value.
+SINAD=(Psignal+Pnoise+Pdistortion)/(Pnoise+Pdistortion)
+SINAD is the ratio of the power of the fundamental (PS) to the power of all the other spectral components including noise (PN) and distortion (PD), but excluding dc.
+This code is still in progess and will be updated soon.
